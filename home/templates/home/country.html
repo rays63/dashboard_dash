@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}DashBoard{% endblock %}
+
+{% load plotly_dash %}
+
+{% block content %}
+<div class="container-fluid p-0">
+    <!-- Header -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">{{ section_title }}CO<sub>2</sub> Visualization By Country</h1>
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            <i class="fas fa-download fa-sm text-white-50"></i> Generate Report
+        </a>
+    </div>
+    
+    <!-- Charts Row -->
+    <div class="row">
+        <div class="col-md-6 col-sm-12 mb-4">
+            <!-- Bubble Chart -->
+            <div class="plotly_class card h-100">
+                {% plotly_app name='Bub_chart' ratio=0.45 %}
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 mb-4">
+            <!-- Line Chart -->
+            <div class="plotly_class card h-100">
+                {% plotly_app name='Line_chart' ratio=0.45 %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Table Row -->
+    <div class="row">
+        <div class="col-md-6 col-sm-12 mb-4">
+            <!-- Data Table -->
+            <div class="plotly_class card h-100">
+                {% plotly_app name='Pie_chart' ratio=0.45 %}
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 mb-4">
+            <!-- Data Table -->
+            <div class="plotly_class card h-100">
+                {% plotly_app name='Scat_plot' ratio=0.45 %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

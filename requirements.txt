@@ -1,0 +1,8 @@
+pandas
+django
+django-plotly-dash
+dash
+django_extensions
+plotly
+dash_renderer
+channel_redis

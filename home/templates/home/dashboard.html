@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+{% load plotly_dash %}
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">CO<sub>2</sub> Dashboard</h1>
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+    </div>
+
+    <div class="{% plotly_class name='Dash_Board' %} card" style="height: 100%">
+        <div>
+            {% plotly_app name='Dash_Board' ratio=0.45 %}
+        </div>
+        
+    </div>
+    
+{% endblock  %}

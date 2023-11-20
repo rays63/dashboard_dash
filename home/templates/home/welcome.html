@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+    {% load plotly_dash %}
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">{{ section_title }}CO<sub>2</sub> Visualization By Continents</h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                <i class="fas fa-download fa-sm text-white-50"></i> Generate Report
+            </a>
+        </div>
+        
+        <!-- Charts Row -->
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
+                <!-- Bubble Chart -->
+                <div class="plotly_class card h-100">
+                    {% plotly_app name='l_chart' ratio=0.45 %}
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
+                <!-- Line Chart -->
+                <div class="plotly_class card h-100">
+                    {% plotly_app name='B_chart' ratio=0.45 %}
+                </div>
+            </div>
+        </div>
+    
+        <!-- Data Table Row -->
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
+                <!-- Data Table -->
+                <div class="plotly_class card h-100">
+                    {% plotly_app name='Area_c' ratio=0.45 %}
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
+                <!-- Data Table -->
+                <div class="plotly_class card h-100">
+                    {% plotly_app name='P_chart' ratio=0.45 %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock  %}
