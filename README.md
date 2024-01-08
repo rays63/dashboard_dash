@@ -3,9 +3,9 @@ this repo consist of global co2 visualization dashboard made using django .
 
 ## setup
  setup venv
- 
+ ```
  python -m venv ./venv
- 
+```
   ./venv/Scripts/activate
 
 install all the required modules 
