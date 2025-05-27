@@ -1,5 +1,5 @@
 ### CO2 dashboard
-this repo consist of global co2 visualization dashboard made using django .
+This repo consist of global co2 visualization dashboard made using django .
 
 ## setup
  #### Setup virtual environment
